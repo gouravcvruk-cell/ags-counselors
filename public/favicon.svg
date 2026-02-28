@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="AGS Counselors">
+  <rect width="120" height="120" rx="28" fill="#8B1538"/>
+  <path d="M30 70c10-22 50-22 60 0" fill="none" stroke="#F5E8EC" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="45" cy="48" r="8" fill="#F5E8EC"/>
+  <circle cx="75" cy="48" r="8" fill="#F5E8EC"/>
+</svg>
