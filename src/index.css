@@ -20,7 +20,7 @@ body {
 }
 
 .section {
-  @apply py-16 px-4;
+  @apply py-14 md:py-16 px-4 sm:px-6 lg:px-8;
 }
 
 .container-wide {
@@ -48,7 +48,7 @@ body {
 }
 
 .card {
-  @apply rounded-2xl bg-white/90 p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  @apply rounded-2xl bg-white/90 p-6 md:p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
 }
 
 @keyframes floatSoft {

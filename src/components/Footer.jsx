@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 export default function Footer() {
   return (
     <footer className="bg-burgundy-900 text-rose-50">
-      <div className="container-wide py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-wide px-4 sm:px-6 lg:px-8 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
             <img
@@ -65,8 +65,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-rose-800">
-        <div className="container-wide py-4 text-sm text-rose-200 flex flex-col md:flex-row items-center justify-between gap-2">
-          <span>© 2026 AGS Counselors. All rights reserved.</span>
+        <div className="container-wide px-4 sm:px-6 lg:px-8 py-4 text-sm text-rose-200 flex flex-col md:flex-row items-center justify-between gap-2">
+          <span>Copyright 2026 AGS Counselors. All rights reserved.</span>
           <span>Made with care for your healing journey.</span>
         </div>
       </div>

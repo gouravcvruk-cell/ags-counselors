@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-rose-100">
-      <div className="container-wide flex items-center justify-between py-4">
+      <div className="container-wide px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
         <NavLink to="/" className="flex items-center gap-3">
           <img
             src="/banner.png"
@@ -27,7 +27,7 @@ export default function Navbar() {
             <p className="font-serif text-xl text-burgundy-700 font-bold">
               AGS Counselors
             </p>
-            <p className="text-xs uppercase tracking-[0.2em] text-rose-400">
+            <p className="hidden sm:block text-xs uppercase tracking-[0.2em] text-rose-400">
               Heal. Grow. Transform.
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="lg:hidden border-t border-rose-100 bg-white">
-          <div className="container-wide py-6 space-y-4">
+          <div className="container-wide px-4 sm:px-6 lg:px-8 py-6 space-y-4">
             <NavLink to="/" className={navLinkClass}>
               Home
             </NavLink>
