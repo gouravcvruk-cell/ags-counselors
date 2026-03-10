@@ -80,7 +80,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="lg:hidden inline-flex items-center justify-center rounded-lg border border-rose-200 px-3 py-2 text-burgundy-700"
+          className="lg:hidden inline-flex items-center justify-center rounded-full border border-rose-200 bg-white/80 px-4 py-2 text-burgundy-700 shadow-sm"
           aria-label="Toggle menu"
           onClick={() => setMenuOpen((open) => !open)}
         >
@@ -90,43 +90,45 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="lg:hidden border-t border-rose-100 bg-white">
-          <div className="container-wide px-4 sm:px-6 lg:px-8 py-6 space-y-4">
-            <NavLink to="/" className={navLinkClass}>
-              Home
-            </NavLink>
-            <NavLink to="/about" className={navLinkClass}>
-              About
-            </NavLink>
-            <div className="space-y-2">
-              <NavLink to="/services" className={navLinkClass}>
-                Services
+          <div className="container-wide px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex flex-col gap-4 text-base">
+              <NavLink to="/" className="text-burgundy-700 font-semibold">
+                Home
               </NavLink>
-              <div className="pl-4 space-y-2">
-                {services.map((service) => (
-                  <NavLink
-                    key={service.id}
-                    to={`/services#${service.id}`}
-                    className="block text-sm text-slate-600 hover:text-burgundy-700"
-                  >
-                    {service.title}
-                  </NavLink>
-                ))}
+              <NavLink to="/about" className="text-burgundy-700 font-semibold">
+                About
+              </NavLink>
+              <div className="flex flex-col gap-2">
+                <NavLink to="/services" className="text-burgundy-700 font-semibold">
+                  Services
+                </NavLink>
+                <div className="pl-4 flex flex-col gap-2 text-sm text-slate-600">
+                  {services.map((service) => (
+                    <NavLink
+                      key={service.id}
+                      to={`/services#${service.id}`}
+                      className="hover:text-burgundy-700"
+                    >
+                      {service.title}
+                    </NavLink>
+                  ))}
+                </div>
               </div>
+              <NavLink to="/resources" className="text-burgundy-700 font-semibold">
+                Resources
+              </NavLink>
+              <NavLink to="/contact" className="text-burgundy-700 font-semibold">
+                Contact
+              </NavLink>
+              <a
+                href={contactInfo.bookingForm}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary w-full text-center"
+              >
+                Book Session
+              </a>
             </div>
-            <NavLink to="/resources" className={navLinkClass}>
-              Resources
-            </NavLink>
-            <NavLink to="/contact" className={navLinkClass}>
-              Contact
-            </NavLink>
-            <a
-              href={contactInfo.bookingForm}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-primary w-full"
-            >
-              Book Session
-            </a>
           </div>
         </div>
       )}
